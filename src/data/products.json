@@ -1,0 +1,63 @@
+[
+  {
+    "id": "p1",
+    "name": "Handloom Cotton Scarf",
+    "price": 19.99,
+    "category": "accessories",
+    "artisan": "Sita Devi",
+    "image": "https://images.unsplash.com/photo-1520975837033-4f2d6f19780f?w=800&q=80&auto=format&fit=crop",
+    "description": "Soft handloom cotton scarf with traditional weave patterns.",
+    "emoji": "🧣"
+  },
+  {
+    "id": "p2",
+    "name": "Woven Tote Bag",
+    "price": 29.99,
+    "category": "bags",
+    "artisan": "Ravi Kumar",
+    "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800&q=80&auto=format&fit=crop",
+    "description": "Durable handwoven tote bag featuring traditional artisan patterns.",
+    "emoji": "👜"
+  },
+  {
+    "id": "p3",
+    "name": "Artisan Table Runner",
+    "price": 24.50,
+    "category": "home",
+    "artisan": "Meera Patil",
+    "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80&auto=format&fit=crop",
+    "description": "Elegant handwoven table runner perfect for dining and home decor.",
+    "emoji": "🧵"
+  },
+  {
+    "id": "p4",
+    "name": "Decorative Cushion Cover",
+    "price": 14.75,
+    "category": "home",
+    "artisan": "Raghav Singh",
+    "image": "https://images.unsplash.com/photo-1534237710431-e2fc698436d0?w=800&q=80&auto=format&fit=crop",
+    "description": "Vibrant cushion cover with intricate geometric motifs.",
+    "emoji": "🛋️"
+  },
+  {
+    "id": "p5",
+    "name": "Handcrafted Wall Hanging",
+    "price": 34.00,
+    "category": "wall-art",
+    "artisan": "Anjali Rao",
+    "image": "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800&q=80&auto=format&fit=crop",
+    "description": "Beautiful handcrafted wall hanging inspired by traditional regional art.",
+    "emoji": "🎨"
+  },
+  {
+    "id": "p6",
+    "name": "Traditional Silk Shawl",
+    "price": 45.50,
+    "category": "clothing",
+    "artisan": "Arjun Desai",
+    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80&auto=format&fit=crop",
+    "description": "Luxurious traditional silk shawl with exquisite handwoven details.",
+    "emoji": "👕"
+  }
+]
+
