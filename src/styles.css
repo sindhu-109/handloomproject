@@ -1,6 +1,6 @@
 /* Regional background images */
 .bg-kullu {
-  background-image: url('https://maheshwarihandloom.com/uploadeddata/product/whatsapp-image-2022-12-25-at-113444-am-PvvSLCb3c4.jpeg');
+  background-image: url('https://lh3.googleusercontent.com/0ukH7b1U-jKQMtj1trIGBfP35AdJ8BNSQnU2glxIQAaj-0CYupNYuX0f-2jUFQWMag.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -19,6 +19,7 @@
   background-size: cover;
   background-position: center;
 }
+
 /* Basic layout helpers for new components */
 .nav {
   display: flex;
@@ -319,19 +320,19 @@
 }
 
 .chanderi {
-  background-image: url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80&auto=format&fit=crop');
+  background-image: url('https://static-blog.treebo.com/wp-content/uploads/2023/04/header-1-740x487.jpg');
 }
 
 .patola {
-  background-image: url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800&q=80&auto=format&fit=crop');
+  background-image: url('https://tse4.mm.bing.net/th/id/OIP.MYi3a608BPaLU2bFJQoNkgHaEl?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3');
 }
 
 .madhubani-textiles {
-  background-image: url('https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800&q=80&auto=format&fit=crop');
+  background-image: url('https://tse1.mm.bing.net/th/id/OIP.A4USLNFfyNBMsBRHBLuN6gAAAA?cb=12&w=416&h=624&rs=1&pid=ImgDetMain&o=7&rm=3');
 }
 
 .kullu-handloom {
-  background-image: url('https://images.unsplash.com/photo-1534237710431-e2fc698436d0?w=800&q=80&auto=format&fit=crop');
+  background-image: url('https://lh3.googleusercontent.com/0ukH7b1U-jKQMtj1trIGBfP35AdJ8BNSQnU2glxIQAaj-0CYupNYuX0f-2jUFQWMag');
 }
 
 
