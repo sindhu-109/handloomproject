@@ -7,39 +7,45 @@ function Home({ onAddToCart }) {
   const categories = [
     { 
       name: 'Clothing', 
+      slug: 'clothing',
       icon: '👕', 
       description: 'Handwoven sarees, kurtas, shawls, and stoles',
       count: products.filter(p => p.category === 'clothing').length
     },
     { 
       name: 'Bags', 
+      slug: 'bags',
       icon: '👜', 
       description: 'Eco-friendly handloom tote bags, purses, and sling bags',
       count: products.filter(p => p.category === 'bags').length
     },
     { 
       name: 'Home Décor', 
+      slug: 'homedecor',
       icon: '🏠', 
       description: 'Cushions, curtains, table runners, and handmade mats',
-      count: products.filter(p => p.category === 'home').length
+      count: products.filter(p => p.category === 'homedecor').length
     },
     { 
       name: 'Wall Art', 
+      slug: 'wall-art',
       icon: '🎨', 
       description: 'Traditional fabric art, framed weaves, and tapestries',
       count: products.filter(p => p.category === 'wall-art').length
     },
     { 
       name: 'Accessories', 
+      slug: 'accessories',
       icon: '🧣', 
       description: 'Scarves, jewelry, and handcrafted belts',
       count: products.filter(p => p.category === 'accessories').length
     },
     { 
       name: 'Lifestyle & Gifts', 
+      slug: 'lifestyle-gifts',
       icon: '🧺', 
       description: 'Sustainable gift sets, journals, and daily-use crafts',
-      count: 0 // No products in this category yet
+      count: products.filter(p => p.category === 'lifestyle-gifts').length
     }
   ]
 
@@ -53,14 +59,14 @@ function Home({ onAddToCart }) {
           <h2 className="section-title">Shop by Category</h2>
           <div className="categories-grid">
             {categories.map((category, index) => (
-              <div key={index} className="category-card">
+              <a key={index} className="category-card" href={`/products?category=${encodeURIComponent(category.slug)}`}>
                 <span className="category-icon">{category.icon}</span>
                 <h3>{category.name}</h3>
                 <p className="category-description">{category.description}</p>
                 {category.count > 0 && (
                   <span className="category-count">{category.count} products</span>
                 )}
-              </div>
+              </a>
             ))}
           </div>
         </section>

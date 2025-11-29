@@ -1,10 +1,25 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useEffect } from 'react'
 import ProductCard from '../components/ProductCard'
 import products from '../data/products.json'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 function Products({ onAddToCart }) {
   const [q, setQ] = useState('')
-  const [category, setCategory] = useState('all')
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  // Read category from query param if present (e.g. ?category=clothing)
+  function getCategoryFromSearch() {
+    try {
+      const params = new URLSearchParams(location.search)
+      const c = params.get('category')
+      return c || 'all'
+    } catch {
+      return 'all'
+    }
+  }
+
+  const [category, setCategory] = useState(getCategoryFromSearch)
   const [maxPrice, setMaxPrice] = useState('')
 
   const categories = useMemo(() => ['all', ...new Set(products.map(p => p.category).filter(Boolean))], [])
@@ -18,12 +33,28 @@ function Products({ onAddToCart }) {
     })
   }, [q, category, maxPrice])
 
+  // keep category in sync with the URL search param
+  useEffect(() => {
+    const c = getCategoryFromSearch()
+    if (c !== category) setCategory(c)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.search])
+
   return (
     <div className="content">
       <h1 className="section-title">All Products</h1>
       <div style={{display:'grid',gridTemplateColumns:'1fr auto auto auto',gap:12,margin:'0 0 16px'}}>
         <input placeholder="Search by name or artisan" value={q} onChange={e=>setQ(e.target.value)} />
-        <select value={category} onChange={e=>setCategory(e.target.value)}>
+        <select value={category} onChange={e=>{
+          const next = e.target.value
+          setCategory(next)
+          // update URL so category selection is shareable
+          const params = new URLSearchParams(location.search)
+          if (next === 'all') params.delete('category')
+          else params.set('category', next)
+          const qs = params.toString()
+          navigate({ pathname: '/products', search: qs ? `?${qs}` : '' }, { replace: true })
+        }}>
           {categories.map(c => <option key={c} value={c}>{c}</option>)}
         </select>
         <input type="number" placeholder="Max price" value={maxPrice} onChange={e=>setMaxPrice(e.target.value)} />
