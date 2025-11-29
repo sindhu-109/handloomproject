@@ -1,5 +1,5 @@
 import { useMemo, useState, useEffect } from 'react'
-import { BrowserRouter, Routes, Route, Link, useNavigate } from 'react-router-dom'
+import { HashRouter, Routes, Route, Link, useNavigate } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ProtectedRoute from './components/ProtectedRoute'
@@ -157,9 +157,9 @@ function AppContent() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AppContent />
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
