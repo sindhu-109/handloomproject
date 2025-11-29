@@ -54,13 +54,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="page">
-        <header className="header">
-          <div className="brand"><Link to="/">Handloom Heritage</Link></div>
-          <div className="cart">
-            <span className="cart-icon">🛒</span>
-            <span className="cart-count" aria-label={`Items in cart: ${totalItems}`}>{totalItems}</span>
-          </div>
-        </header>
+        {/* Header removed: branding and cart moved to Navbar */}
         <Navbar role={user?.role || null} onLogout={handleLogout} />
 
         <Routes>
